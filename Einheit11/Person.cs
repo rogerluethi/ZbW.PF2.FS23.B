@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Einheit11
+﻿namespace Einheit11
 {
     public class Person
     {
@@ -16,7 +10,19 @@ namespace Einheit11
             set { firstName = value != null ? value : "not define"; }
         }
 
+        public string GetLastName()
+        {
+            return LastName;
+        }
+
+        private void SetLastName(string value)
+        {
+            LastName = value;
+        }
+
         public string LastName { get; set; }
+
+
 
     }
 }
