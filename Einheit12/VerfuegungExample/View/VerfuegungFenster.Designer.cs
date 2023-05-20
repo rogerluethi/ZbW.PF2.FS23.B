@@ -325,13 +325,13 @@
             // 
             // BtnDrucken
             // 
-            BtnDrucken.Location = new Point(772, 471);
+            BtnDrucken.Location = new Point(803, 458);
             BtnDrucken.Name = "BtnDrucken";
             BtnDrucken.Size = new Size(112, 34);
             BtnDrucken.TabIndex = 30;
             BtnDrucken.Text = "Drucken";
             BtnDrucken.UseVisualStyleBackColor = true;
-            BtnDrucken.Click += BtnDrucken_Click;
+            BtnDrucken.Click += ClickOnBtnDrucken;
             // 
             // VerfuegungFenster
             // 
@@ -369,7 +369,7 @@
             Controls.Add(LblNachnameE);
             Controls.Add(LblVornameE);
             Name = "VerfuegungFenster";
-            Text = "MangerView";
+            Text = "Verfügung";
             ((System.ComponentModel.ISupportInitialize)NupPlzE).EndInit();
             ((System.ComponentModel.ISupportInitialize)NupNrE).EndInit();
             ((System.ComponentModel.ISupportInitialize)NupNrA).EndInit();

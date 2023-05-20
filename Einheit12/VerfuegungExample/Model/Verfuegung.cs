@@ -24,7 +24,7 @@
 
         public Person Abesender { get; set; }
 
-        public void Print()
+        public void Drucken()
         {
             Document document = new Document();
             string filePath = $"C:\\Users\\Larissa\\Documents\\Temp\\Verfuegung-{Guid.NewGuid()}.pdf";
@@ -38,11 +38,15 @@
             var adresseAbsender = HinzufuegenAdresse(Abesender.Vorname, Abesender.Nachname, Abesender.Adresse.Strasse, Abesender.Adresse.Plz, Abesender.Adresse.Ort);
             document.Add(adresseAbsender);
 
-            var erwaegung = HinzufugenErwaegung();
+            var erwaegung = HinzufugenAbschnitt(Erwaegung);
             document.Add(erwaegung);
+
+            var rm = HinzufugenAbschnitt(rechtsmittelbelehrung);
+            document.Add(rm);
 
             document.Close();
         }
+
 
         private Paragraph GibParagraph(int alignment)
         {
@@ -51,12 +55,13 @@
             return p;
         }
 
-        private Paragraph HinzufugenErwaegung()
+        private Paragraph HinzufugenAbschnitt(string text)
         {
             var p = GibParagraph(Element.ALIGN_LEFT);
-            Chunk erwaegung = new Chunk($"{Erwaegung}", GibStandardSchrift());
+            Chunk element = new Chunk($"{text}", GibStandardSchrift());
 
-            p.Add(erwaegung);
+            p.Add(element);
+            p.Add(Chunk.NEWLINE);
             p.Add(Chunk.NEWLINE);
 
             return p;
@@ -71,15 +76,15 @@
         {
             Paragraph p = GibParagraph(Element.ALIGN_LEFT);
 
-            Chunk name = new Chunk($"{vorname} {nachname}", GibStandardSchrift());
-            Chunk street = new Chunk($"{strasse}", GibStandardSchrift());
-            Chunk city = new Chunk($"{plz} {ort}", GibStandardSchrift());
+            Chunk n = new Chunk($"{vorname} {nachname}", GibStandardSchrift());
+            Chunk s = new Chunk($"{strasse}", GibStandardSchrift());
+            Chunk c = new Chunk($"{plz} {ort}", GibStandardSchrift());
 
-            p.Add(name);
+            p.Add(n);
             p.Add(Chunk.NEWLINE);
-            p.Add(street);
+            p.Add(s);
             p.Add(Chunk.NEWLINE);
-            p.Add(city);
+            p.Add(c);
             p.Add(Chunk.NEWLINE);
             p.Add(Chunk.NEWLINE);
 
