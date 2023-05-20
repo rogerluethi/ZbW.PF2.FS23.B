@@ -72,8 +72,8 @@
             Paragraph p = GibParagraph(Element.ALIGN_LEFT);
 
             Chunk name = new Chunk($"{vorname} {nachname}", GibStandardSchrift());
-            Chunk street = new Chunk($"{strasse}",  GibStandardSchrift());
-            Chunk city = new Chunk($"{plz} {ort}",  GibStandardSchrift());
+            Chunk street = new Chunk($"{strasse}", GibStandardSchrift());
+            Chunk city = new Chunk($"{plz} {ort}", GibStandardSchrift());
 
             p.Add(name);
             p.Add(Chunk.NEWLINE);
