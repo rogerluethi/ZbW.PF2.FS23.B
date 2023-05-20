@@ -1,6 +1,6 @@
 ﻿namespace Einheit12.VerfuegungExample.View
 {
-    partial class MangerView
+    partial class VerfuegungFenster
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             LblVornameA = new Label();
             label12 = new Label();
             label13 = new Label();
-            BtnErstellePdf = new Button();
+            BtnDrucken = new Button();
             ((System.ComponentModel.ISupportInitialize)NupPlzE).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NupNrE).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NupNrA).BeginInit();
@@ -323,21 +323,22 @@
             label13.TabIndex = 29;
             label13.Text = "Absender";
             // 
-            // BtnErstellePdf
+            // BtnDrucken
             // 
-            BtnErstellePdf.Location = new Point(744, 456);
-            BtnErstellePdf.Name = "BtnErstellePdf";
-            BtnErstellePdf.Size = new Size(171, 58);
-            BtnErstellePdf.TabIndex = 30;
-            BtnErstellePdf.Text = "Erstelle Pdf";
-            BtnErstellePdf.UseVisualStyleBackColor = true;
+            BtnDrucken.Location = new Point(772, 471);
+            BtnDrucken.Name = "BtnDrucken";
+            BtnDrucken.Size = new Size(112, 34);
+            BtnDrucken.TabIndex = 30;
+            BtnDrucken.Text = "Drucken";
+            BtnDrucken.UseVisualStyleBackColor = true;
+            BtnDrucken.Click += BtnDrucken_Click;
             // 
-            // MangerView
+            // VerfuegungFenster
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(958, 569);
-            Controls.Add(BtnErstellePdf);
+            Controls.Add(BtnDrucken);
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(NupNrA);
@@ -367,7 +368,7 @@
             Controls.Add(LblAdresseE);
             Controls.Add(LblNachnameE);
             Controls.Add(LblVornameE);
-            Name = "MangerView";
+            Name = "VerfuegungFenster";
             Text = "MangerView";
             ((System.ComponentModel.ISupportInitialize)NupPlzE).EndInit();
             ((System.ComponentModel.ISupportInitialize)NupNrE).EndInit();
@@ -409,6 +410,6 @@
         private Label LblVornameA;
         private Label label12;
         private Label label13;
-        private Button BtnErstellePdf;
+        private Button BtnDrucken;
     }
 }

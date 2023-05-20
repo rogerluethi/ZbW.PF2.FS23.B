@@ -3,8 +3,8 @@
     public class Adresse
     {
         public Adresse(string strassenname,
-            int strassennr,
-            int plz,
+            decimal strassennr,
+            decimal plz,
             string ort)
         {
             Plz = plz;
@@ -14,11 +14,11 @@
 
         public string Ort { get; set; }
 
-        public int Plz { get; set; }
+        public decimal Plz { get; set; }
 
         public string Strasse { get; private set; }
 
-        public void SetzeStrasse(string strassenname, int strassennr)
+        public void SetzeStrasse(string strassenname, decimal strassennr)
         {
             Strasse = $"{strassenname} {strassennr}";
         }
