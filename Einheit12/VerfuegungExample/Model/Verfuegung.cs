@@ -27,7 +27,7 @@
         public void Drucken()
         {
             Document document = new Document();
-            string filePath = $"C:\\Users\\Larissa\\Documents\\Temp\\Verfuegung-{Guid.NewGuid()}.pdf";
+            string filePath = $"..\\..\\..\\..\\Temp\\Verfuegung-{Guid.NewGuid()}.pdf";
 
             PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
             document.Open();
