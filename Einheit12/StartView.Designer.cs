@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             BtnVerfuegungExample = new Button();
+            BtnRefExample = new Button();
             SuspendLayout();
             // 
             // BtnVerfuegungExample
@@ -42,11 +43,23 @@
             BtnVerfuegungExample.UseVisualStyleBackColor = true;
             BtnVerfuegungExample.Click += ClickOnBtnVerfuegungExample;
             // 
+            // BtnRefExample
+            // 
+            BtnRefExample.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnRefExample.Location = new Point(53, 141);
+            BtnRefExample.Name = "BtnRefExample";
+            BtnRefExample.Size = new Size(188, 79);
+            BtnRefExample.TabIndex = 1;
+            BtnRefExample.Text = "Referenz Beispiel";
+            BtnRefExample.UseVisualStyleBackColor = true;
+            BtnRefExample.Click += ClickOnBtnRefExample;
+            // 
             // StartView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(294, 361);
+            Controls.Add(BtnRefExample);
             Controls.Add(BtnVerfuegungExample);
             Name = "StartView";
             Text = "StartView";
@@ -56,5 +69,6 @@
         #endregion
 
         private Button BtnVerfuegungExample;
+        private Button BtnRefExample;
     }
 }

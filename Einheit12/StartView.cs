@@ -1,4 +1,5 @@
-﻿using Einheit12.VerfuegungExample.View;
+﻿using Einheit12.ReferenceExample;
+using Einheit12.VerfuegungExample.View;
 
 namespace Einheit12
 {
@@ -13,6 +14,14 @@ namespace Einheit12
         {
             var view = new VerfuegungFenster();
             view.Show();
+            this.Visible = false;
+        }
+
+        private void ClickOnBtnRefExample(object sender, EventArgs e)
+        {
+            var view = new ReferenceExampleView();
+            view.Show();
+            this.Visible = false;
         }
     }
 }
