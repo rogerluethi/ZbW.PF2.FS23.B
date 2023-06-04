@@ -21,7 +21,7 @@ namespace Einheit12.VerfuegungExample.View
             var personEmpfaenger = new Person(TxtVornameE.Text, TxtNachnameE.Text, adresseEmpfaenger);
 
             var verfuegung = ErstelleVerfuegung(personAbsender, personEmpfaenger);
-            verfuegung.Drucken();
+           // verfuegung.Drucken();
         }
 
 

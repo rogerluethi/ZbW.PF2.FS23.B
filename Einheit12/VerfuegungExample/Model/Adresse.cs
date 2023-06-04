@@ -21,6 +21,7 @@
         public void SetzeStrasse(string strassenname, decimal strassennr)
         {
             Strasse = $"{strassenname} {strassennr}";
+            
         }
     }
 }

@@ -24,7 +24,7 @@
 
         public Person Abesender { get; set; }
 
-        public void Drucken()
+        public void Drucpken()
         {
             Document document = new Document();
             string filePath = $"..\\..\\..\\..\\Temp\\Verfuegung-{Guid.NewGuid()}.pdf";
