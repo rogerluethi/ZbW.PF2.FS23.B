@@ -8,6 +8,11 @@ namespace Einheit13.InheritanceExample.Model
 {
     public class Medium
     {
+
+        //public Medium() { }
+
+        public Medium(int id) { }
+
         public string Name { get; set; }
     }
 }
